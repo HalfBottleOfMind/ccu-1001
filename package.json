@@ -1,5 +1,5 @@
 {
-  "name": "ccu-interface",
+  "name": "ccu-1001-interface",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -22,7 +22,8 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
     "postcss": "^7.0.35",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4",
+    "vue3-tabs-component": "0.0.2"
   },
   "eslintConfig": {
     "root": true,

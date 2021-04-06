@@ -10,8 +10,15 @@
    <NavigateButton
        @click="$emit('navigate', 'contacts')"
        :active="currentPage === 'contacts'"
+       class="mb-2"
    >
      Настройки контактов
+   </NavigateButton>
+   <NavigateButton
+       @click="$emit('navigate', 'example tabs')"
+       :active="currentPage === 'example tabs'"
+   >
+     Example Tabs
    </NavigateButton>
  </div>
 </template>

@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* vue3-tabs-component classes */
+.tabs-component {
+    @apply text-white
+}
+.tabs-component > .tabs-component-tabs {
+    @apply flex
+}
+.tabs-component > .tabs-component-tabs > .tabs-component-tab {
+    @apply bg-gray py-2 px-4
+}
+.tabs-component > .tabs-component-tabs > .is-active {
+    @apply bg-gray-dark
+}
+.tabs-component > .tabs-component-panels {
+    @apply bg-gray-dark
+}
+.tabs-component > .tabs-component-panels > .tabs-component-panel {
+    @apply p-4
+}

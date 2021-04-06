@@ -5,6 +5,7 @@
     <div class="bg-gray-light w-full">
       <Index v-if="currentPage === 'index'" />
       <Contacts v-if="currentPage === 'contacts'" />
+      <ExampleTabs v-if="currentPage === 'example tabs'" />
     </div>
   </div>
 </template>
@@ -16,10 +17,12 @@ import Index from "@/components/pages/Index";
 import Contacts from "@/components/pages/Contacts";
 import { ref } from 'vue'
 import { init } from "@/api/general";
+import ExampleTabs from "@/components/pages/ExampleTabs";
 
 export default {
   name: 'App',
   components: {
+    ExampleTabs,
     Contacts,
     Index,
     Header,
