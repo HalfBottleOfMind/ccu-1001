@@ -17,8 +17,15 @@
    <NavigateButton
        @click="$emit('navigate', 'example tabs')"
        :active="currentPage === 'example tabs'"
+       class="mb-2"
    >
      Example Tabs
+   </NavigateButton>
+   <NavigateButton
+       @click="$emit('navigate', 'example cards')"
+       :active="currentPage === 'example cards'"
+   >
+     Example Cards
    </NavigateButton>
  </div>
 </template>

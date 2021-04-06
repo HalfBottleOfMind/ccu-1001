@@ -2,17 +2,21 @@
   <div class="p-4">
     <Tabs :options="{ useUrlFragments: false }">
       <Tab name="first">
-        First content
+        <div class="p-4">
+          First content
+        </div>
       </Tab>
       <Tab name="second">
-        Second Content
+        <div class="p-4">
+          Second Content
+        </div>
       </Tab>
     </Tabs>
   </div>
 </template>
 
 <script>
-import { Tabs, Tab } from 'vue3-tabs-component'
+import {Tabs, Tab} from 'vue3-tabs-component'
 
 export default {
   name: "ExampleTabs",

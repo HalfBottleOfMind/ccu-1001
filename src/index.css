@@ -10,7 +10,7 @@
     @apply flex
 }
 .tabs-component > .tabs-component-tabs > .tabs-component-tab {
-    @apply bg-gray py-2 px-4
+    @apply bg-gray py-2 px-4 hover:bg-gray-dark
 }
 .tabs-component > .tabs-component-tabs > .is-active {
     @apply bg-gray-dark
@@ -19,5 +19,5 @@
     @apply bg-gray-dark
 }
 .tabs-component > .tabs-component-panels > .tabs-component-panel {
-    @apply p-4
+    /*@apply p-4*/
 }

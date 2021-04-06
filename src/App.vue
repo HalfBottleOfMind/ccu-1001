@@ -6,6 +6,7 @@
       <Index v-if="currentPage === 'index'" />
       <Contacts v-if="currentPage === 'contacts'" />
       <ExampleTabs v-if="currentPage === 'example tabs'" />
+      <ExampleCards v-if="currentPage === 'example cards'" />
     </div>
   </div>
 </template>
@@ -18,10 +19,12 @@ import Contacts from "@/components/pages/Contacts";
 import { ref } from 'vue'
 import { init } from "@/api/general";
 import ExampleTabs from "@/components/pages/ExampleTabs";
+import ExampleCards from "@/components/pages/ExampleCards";
 
 export default {
   name: 'App',
   components: {
+    ExampleCards,
     ExampleTabs,
     Contacts,
     Index,
