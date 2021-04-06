@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Form classes */
+form > .input-text {
+    @apply bg-gray outline-none p-2
+}
+
 /* vue3-tabs-component classes */
 .tabs-component {
     @apply text-white
