@@ -1,26 +1,46 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header />
+  <div class="flex flex-1 h-full">
+    <Sidebar :currentPage="currentPage" @navigate="setCurrentPage" />
+    <div class="bg-gray-light w-full">
+      <Index v-if="currentPage === 'index'" />
+      <Contacts v-if="currentPage === 'contacts'" />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from '@/components/Header'
+import Sidebar from '@/components/Sidebar'
+import Index from "@/components/pages/Index";
+import Contacts from "@/components/pages/Contacts";
+import { ref } from 'vue'
+import { init } from "@/api/general";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Contacts,
+    Index,
+    Header,
+    Sidebar,
+  },
+  setup() {
+    // Navigation
+    const defaultPage = 'index'
+    const currentPage = ref(defaultPage)
+
+    function setCurrentPage(page) {
+      currentPage.value = page
+    }
+
+    // Initial setup
+    init()
+
+    return {
+      currentPage,
+      setCurrentPage,
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
