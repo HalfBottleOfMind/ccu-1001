@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       minWidth: {
         300: '300px',
+      },
+      borderWidth: {
+        1: '1px',
       }
     },
     colors: {
@@ -21,7 +24,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['even'],
+    },
   },
   plugins: [],
 }

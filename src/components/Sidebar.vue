@@ -18,6 +18,12 @@
    >
      Example Save Data
    </NavigateButton>
+   <NavigateButton
+       @click="$emit('navigate', 'example table')"
+       :active="currentPage === 'example table'"
+   >
+     Example Table
+   </NavigateButton>
  </div>
 </template>
 
