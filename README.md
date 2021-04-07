@@ -23,9 +23,24 @@
 
 Пример создания новой страницы:
 1) создать vue-компонент `/src/components/pages/NewPage.vue`;
-2) в файле `/src/App.vue` в начале скрипта добавить `import NewPage from '@/components/pages/NewPage''`;
-3) в файле `/src/App.vue` в скрипте в `export default { components: { ... } }` добавить `NewPage,`;
-4) в файле `/src/App.vue` в `div#content` добавить `<NewPage v-if="currentPage === 'new page'" />`;
+2) в файле `/src/App.vue` в начале скрипта добавить 
+   ```javascript
+   import NewPage from '@/components/pages/NewPage'
+   ```
+3) в файле `/src/App.vue` в скрипте добавить использование компонента `NewPage` 
+   ```javascript
+   export default {
+    components:
+      { 
+        ...,
+        NewPage,
+      }
+   }
+   ```
+4) в файле `/src/App.vue` в `div#content` добавить 
+   ```vue
+   <NewPage v-if="currentPage === 'new page'" />
+   ```
    1) при необходимости передать внутрь страницы данные добавить директиву `v-model="store.newPageData"`;
 5) в файле `/src/components/Sidebar.vue` в `div#nav` добавить
     ```vue
