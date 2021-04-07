@@ -1,5 +1,5 @@
 <template>
-  <div class="py-2 px-4 rounded-sm text-black bg-main" @click="callback()">
+  <div class="py-2 px-4 rounded-sm text-black bg-main cursor-pointer flex items-center text-center" @click="callback()">
     <slot />
   </div>
 </template>

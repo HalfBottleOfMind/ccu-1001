@@ -12,6 +12,12 @@
    >
      Example Cards
    </NavigateButton>
+   <NavigateButton
+       @click="$emit('navigate', 'example save data')"
+       :active="currentPage === 'example save data'"
+   >
+     Example Save Data
+   </NavigateButton>
  </div>
 </template>
 
