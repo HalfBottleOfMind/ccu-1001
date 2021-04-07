@@ -24,6 +24,12 @@
    >
      Example Table
    </NavigateButton>
+   <NavigateButton
+       @click="$emit('navigate', 'example bars')"
+       :active="currentPage === 'example bars'"
+   >
+     Example Bars
+   </NavigateButton>
  </div>
 </template>
 
