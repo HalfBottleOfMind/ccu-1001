@@ -1,5 +1,5 @@
 <template>
- <div class="bg-gray p-4 w-1/6 min-w-300">
+ <div id="nav" class="bg-gray p-4 w-1/6 min-w-300">
    <NavigateButton
        @click="$emit('navigate', 'example tabs')"
        :active="currentPage === 'example tabs'"

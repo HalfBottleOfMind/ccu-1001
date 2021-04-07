@@ -8,7 +8,7 @@
     />
     <div class="flex flex-1 bg-gray-light">
       <Sidebar :currentPage="currentPage" @navigate="setCurrentPage"/>
-      <div v-if="contentVisible" class="w-full">
+      <div id="content" v-if="contentVisible" class="w-full">
         <ExampleTabs v-if="currentPage === 'example tabs'"/>
         <ExampleCards v-if="currentPage === 'example cards'"/>
         <ExampleSaveData v-if="currentPage === 'example save data'" v-model="store.contacts"/>
@@ -95,6 +95,7 @@ export default {
     function resetChanges() {
       store.value = JSON.parse(JSON.stringify(initStore.value))
 
+      // this forces Vue to re-render whole content div to make sure that v-models updated
       contentVisible.value = false
       setTimeout(() => contentVisible.value = true, 1)
     }
