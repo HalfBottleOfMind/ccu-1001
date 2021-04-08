@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-between">
     <span :class="labelClasses">{{ label }}</span>
-    <input type="number" v-model="number" @input="update" class="flex py-2 px-4 outline-none rounded border-1 border-main" :class="inputClasses" />
+    <input type="number" v-model="value" @input="update" class="flex py-2 px-4 outline-none rounded border-1 border-main" :class="inputClasses" />
   </div>
 </template>
 
@@ -18,14 +18,14 @@ export default {
   },
   emits: ['update'],
   setup(props, {emit}) {
-    const number = ref(props.modelValue)
+    const value = ref(props.modelValue)
 
     function update() {
-      emit('update', number)
+      emit('update', value)
     }
 
     return {
-      number,
+      value,
       update,
     }
   }

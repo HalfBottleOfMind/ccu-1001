@@ -16,6 +16,11 @@ export async function init() {
         second: 1,
         third: 255,
     }
+    data.examples.checkbox = {
+        first: null,
+        second: true,
+        third: false,
+    }
 
     // return object with all data
     return data

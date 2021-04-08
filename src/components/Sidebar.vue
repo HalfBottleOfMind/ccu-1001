@@ -37,10 +37,16 @@
      Example Input Text
    </NavigateButton>
    <NavigateButton
-       @click="$emit('navigate', 'example input nubmers')"
-       :active="currentPage === 'example input nubmers'"
+       @click="$emit('navigate', 'example input numbers')"
+       :active="currentPage === 'example input numbers'"
    >
      Example Input Numbers
+   </NavigateButton>
+   <NavigateButton
+       @click="$emit('navigate', 'example input checkbox')"
+       :active="currentPage === 'example input checkbox'"
+   >
+     Example Input Checkbox
    </NavigateButton>
  </div>
 </template>

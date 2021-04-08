@@ -15,6 +15,7 @@
         <ExampleBars v-if="currentPage === 'example bars'"/>
         <ExampleInputText v-if="currentPage === 'example input text'" v-model="store.examples.text"/>
         <ExampleInputNumber v-if="currentPage === 'example input numbers'" v-model="store.examples.numbers"/>
+        <ExampleInputCheckbox v-if="currentPage === 'example input checkbox'" v-model="store.examples.checkbox"/>
         <ExampleSaveData v-if="currentPage === 'example save data'" v-model="store.contacts"/>
       </div>
     </div>
@@ -46,10 +47,12 @@ import ExampleTable from "@/components/pages/ExampleTable";
 import ExampleBars from "@/components/pages/ExampleBars";
 import ExampleInputText from "@/components/pages/ExampleInputText";
 import ExampleInputNumber from "@/components/pages/ExampleInputNumber";
+import ExampleInputCheckbox from "@/components/pages/ExampleInputCheckbox";
 
 export default {
   name: 'App',
   components: {
+    ExampleInputCheckbox,
     ExampleInputNumber,
     ExampleInputText,
     ExampleBars,
@@ -64,7 +67,7 @@ export default {
   },
   setup() {
     // Navigation
-    const defaultPage = 'example input numbers'
+    const defaultPage = 'example input checkbox'
     const currentPage = ref(defaultPage)
 
     function setCurrentPage(page) {

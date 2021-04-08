@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-between">
     <span :class="labelClasses">{{ label }}</span>
-    <input v-model="value" @input="update" class="flex py-2 px-4 outline-none rounded border-1 border-main" :class="inputClasses" />
+    <input type="checkbox" v-model="value" @input="update" class="flex w-6 h-6 py-2 px-4 outline-none rounded border-1 border-main" :class="inputClasses" />
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import {ref} from "vue";
 
 export default {
-  name: "Text",
+  name: "Checkbox",
   props: {
     modelValue: String,
     label: String,
