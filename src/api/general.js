@@ -5,6 +5,13 @@ export async function init() {
     data.someData = await Promise.resolve(someFunc())
     data.contacts = fetchContacts()
 
+    data.examples = {}
+    data.examples.text = {
+        first: null,
+        second: 'default',
+        third: 'asdf',
+    }
+
     // return object with all data
     return data
 }

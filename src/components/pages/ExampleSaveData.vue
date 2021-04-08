@@ -9,7 +9,7 @@
 
 <script>
 import Card from "@/components/Card";
-// import {ref} from "vue";
+import {ref} from "vue";
 export default {
   name: "ExampleSaveData",
   components: {Card},
@@ -17,11 +17,10 @@ export default {
     modelValue: Object
   },
   setup(props, {emit}) {
-    // eslint-disable-next-line vue/no-setup-props-destructure
-    const contacts = props.modelValue
+    const contacts = ref(props.modelValue)
 
     function update() {
-      emit('update', contacts)
+      emit('input', contacts)
     }
 
     return {

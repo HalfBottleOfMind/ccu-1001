@@ -30,6 +30,12 @@
    >
      Example Bars
    </NavigateButton>
+   <NavigateButton
+       @click="$emit('navigate', 'example input text')"
+       :active="currentPage === 'example input text'"
+   >
+     Example Input Text
+   </NavigateButton>
  </div>
 </template>
 

@@ -13,6 +13,7 @@
         <ExampleCards v-if="currentPage === 'example cards'"/>
         <ExampleTable v-if="currentPage === 'example table'"/>
         <ExampleBars v-if="currentPage === 'example bars'"/>
+        <ExampleInputText v-if="currentPage === 'example input text'" v-model="store.examples.text"/>
         <ExampleSaveData v-if="currentPage === 'example save data'" v-model="store.contacts"/>
       </div>
     </div>
@@ -42,10 +43,12 @@ import Button from "@/components/Button";
 import ExampleSaveData from "@/components/pages/ExampleSaveData";
 import ExampleTable from "@/components/pages/ExampleTable";
 import ExampleBars from "@/components/pages/ExampleBars";
+import ExampleInputText from "@/components/pages/ExampleInputText";
 
 export default {
   name: 'App',
   components: {
+    ExampleInputText,
     ExampleBars,
     ExampleTable,
     ExampleSaveData,
@@ -58,7 +61,7 @@ export default {
   },
   setup() {
     // Navigation
-    const defaultPage = 'example bars'
+    const defaultPage = 'example input text'
     const currentPage = ref(defaultPage)
 
     function setCurrentPage(page) {
