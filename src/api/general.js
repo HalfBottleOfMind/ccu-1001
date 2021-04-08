@@ -11,6 +11,11 @@ export async function init() {
         second: 'default',
         third: 'asdf',
     }
+    data.examples.numbers = {
+        first: null,
+        second: 1,
+        third: 255,
+    }
 
     // return object with all data
     return data

@@ -36,6 +36,12 @@
    >
      Example Input Text
    </NavigateButton>
+   <NavigateButton
+       @click="$emit('navigate', 'example input nubmers')"
+       :active="currentPage === 'example input nubmers'"
+   >
+     Example Input Numbers
+   </NavigateButton>
  </div>
 </template>
 
