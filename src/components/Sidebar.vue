@@ -48,6 +48,12 @@
    >
      Example Input Checkbox
    </NavigateButton>
+   <NavigateButton
+       @click="$emit('navigate', 'example input select')"
+       :active="currentPage === 'example input select'"
+   >
+     Example Input Select
+   </NavigateButton>
  </div>
 </template>
 

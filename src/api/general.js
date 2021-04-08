@@ -21,6 +21,11 @@ export async function init() {
         second: true,
         third: false,
     }
+    data.examples.selects = {
+        first: null,
+        second: 'first option',
+        third: 'third option',
+    }
 
     // return object with all data
     return data

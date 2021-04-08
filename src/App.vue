@@ -16,9 +16,19 @@
         <ExampleInputText v-if="currentPage === 'example input text'" v-model="store.examples.text"/>
         <ExampleInputNumber v-if="currentPage === 'example input numbers'" v-model="store.examples.numbers"/>
         <ExampleInputCheckbox v-if="currentPage === 'example input checkbox'" v-model="store.examples.checkbox"/>
+        <ExampleInputSelect v-if="currentPage === 'example input select'" v-model="store.examples.selects"/>
         <ExampleSaveData v-if="currentPage === 'example save data'" v-model="store.contacts"/>
       </div>
     </div>
+
+<!--    uncomment this to see data in store-->
+
+<!--    <div class="border-1 border-b-0 border-black">-->
+<!--      {{ store.examples.selects }}-->
+<!--    </div>-->
+<!--    <div class="border-1 border-black">-->
+<!--      {{ initStore.examples.selects }}-->
+<!--    </div>-->
   </div>
   <div v-else class="bg-gray-dark flex flex-1 justify-center items-center">
     <Card title="Please log in">
@@ -48,10 +58,12 @@ import ExampleBars from "@/components/pages/ExampleBars";
 import ExampleInputText from "@/components/pages/ExampleInputText";
 import ExampleInputNumber from "@/components/pages/ExampleInputNumber";
 import ExampleInputCheckbox from "@/components/pages/ExampleInputCheckbox";
+import ExampleInputSelect from "@/components/pages/ExampleInputSelect";
 
 export default {
   name: 'App',
   components: {
+    ExampleInputSelect,
     ExampleInputCheckbox,
     ExampleInputNumber,
     ExampleInputText,
@@ -67,7 +79,7 @@ export default {
   },
   setup() {
     // Navigation
-    const defaultPage = 'example input checkbox'
+    const defaultPage = 'example input select'
     const currentPage = ref(defaultPage)
 
     function setCurrentPage(page) {
