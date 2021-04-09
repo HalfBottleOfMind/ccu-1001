@@ -52,6 +52,15 @@
     </NavigateButton>
     ```
    
+## Инпуты
+
+|Тип        |Компонент  |Пример                 |
+|-----------|-----------|-----------------------|
+|Текст      |`Text`     |`ExampleInputText`     |
+|Число      |`Number`   |`ExampleInputNumber`   |
+|Логический |`Checkbox` |`ExampleInputCheckbox` |
+|Выбор      |`Select`   |`ExampleInputSelect`   |
+   
 ## Визуализации
 
 ### Таблицы
