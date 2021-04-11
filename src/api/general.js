@@ -6,6 +6,11 @@ export async function init() {
     data.contacts = fetchContacts()
 
     data.examples = {}
+    data.examples.bars = {
+        first: 40,
+        second: 15,
+        third: 90,
+    }
     data.examples.text = {
         first: null,
         second: 'default',

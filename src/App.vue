@@ -12,7 +12,7 @@
         <ExampleTabs v-if="currentPage === 'example tabs'"/>
         <ExampleCards v-if="currentPage === 'example cards'"/>
         <ExampleTable v-if="currentPage === 'example table'"/>
-        <ExampleBars v-if="currentPage === 'example bars'"/>
+        <ExampleBars v-if="currentPage === 'example bars'" :values="store.examples.bars"/>
         <ExampleInputText v-if="currentPage === 'example input text'" v-model="store.examples.text"/>
         <ExampleInputNumber v-if="currentPage === 'example input numbers'" v-model="store.examples.numbers"/>
         <ExampleInputCheckbox v-if="currentPage === 'example input checkbox'" v-model="store.examples.checkbox"/>
@@ -79,7 +79,7 @@ export default {
   },
   setup() {
     // Navigation
-    const defaultPage = 'example input select'
+    const defaultPage = 'example bars'
     const currentPage = ref(defaultPage)
 
     function setCurrentPage(page) {
@@ -103,6 +103,24 @@ export default {
         loggedIn.value = false
       }
     }
+
+    // Examples
+    // Bars
+    function updateBarsValues() {
+      function getNumber() {
+        return Math.round(Math.random() * 101);
+      }
+      const newValues = {
+        first: getNumber(),
+        second: getNumber(),
+        third: getNumber(),
+      }
+      store.value.examples.bars = newValues
+      initStore.value.examples.bars = newValues
+    }
+    setInterval(() => {
+      updateBarsValues()
+    }, 5000)
 
     // Store setup
     const store = ref({})

@@ -1,5 +1,14 @@
 <template>
   <div class="p-4">
+    <Card title="first">
+      <HeatBar class="w-full h-4" min=-40 max=120 low=20 high=60 :current=values.first />
+    </Card>
+    <Card title="second">
+      <HeatBar class="w-full h-4" min=-40 max=120 low=20 high=60 :current=values.second />
+    </Card>
+    <Card title="third">
+      <HeatBar class="w-full h-4" min=-40 max=120 low=20 high=60 :current=values.third />
+    </Card>
     <Card title="card 1">
       <HeatBar class="w-full h-4" min=-40 max=120 low=20 high=60 current=-20 />
     </Card>
@@ -46,8 +55,12 @@
 <script>
 import HeatBar from "@/components/visualize/HeatBar";
 import Card from "@/components/Card";
+
 export default {
   name: "ExampleBars",
-  components: {Card, HeatBar}
+  components: {Card, HeatBar},
+  props: {
+    values: Object,
+  },
 }
 </script>
