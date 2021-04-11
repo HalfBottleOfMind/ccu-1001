@@ -12,6 +12,7 @@
         <ExampleTabs v-if="currentPage === 'example tabs'"/>
         <ExampleCards v-if="currentPage === 'example cards'"/>
         <ExampleTable v-if="currentPage === 'example table'"/>
+        <ExampleEditableTable v-if="currentPage === 'example editable table'" v-model="store.examples.editableTable"/>
         <ExampleBars v-if="currentPage === 'example bars'" :values="store.examples.bars"/>
         <ExampleInputText v-if="currentPage === 'example input text'" v-model="store.examples.text"/>
         <ExampleInputNumber v-if="currentPage === 'example input numbers'" v-model="store.examples.numbers"/>
@@ -59,10 +60,12 @@ import ExampleInputText from "@/components/pages/ExampleInputText";
 import ExampleInputNumber from "@/components/pages/ExampleInputNumber";
 import ExampleInputCheckbox from "@/components/pages/ExampleInputCheckbox";
 import ExampleInputSelect from "@/components/pages/ExampleInputSelect";
+import ExampleEditableTable from "@/components/pages/ExampleEditableTable";
 
 export default {
   name: 'App',
   components: {
+    ExampleEditableTable,
     ExampleInputSelect,
     ExampleInputCheckbox,
     ExampleInputNumber,
@@ -79,7 +82,7 @@ export default {
   },
   setup() {
     // Navigation
-    const defaultPage = 'example bars'
+    const defaultPage = 'example tabs'
     const currentPage = ref(defaultPage)
 
     function setCurrentPage(page) {

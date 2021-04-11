@@ -31,6 +31,39 @@ export async function init() {
         second: 'first option',
         third: 'third option',
     }
+    data.examples.editableTable = {
+        items: [
+            {
+                name: 'name 1',
+                email: 'email 1',
+                phone: 'phone 1',
+            },
+            {
+                email: 'email 2',
+                phone: 'phone 2',
+                name: 'name 2',
+            },
+            {
+                phone: 'phone 3',
+                name: 'name 3',
+                email: 'email 3',
+            },
+        ],
+        headers: [
+            {
+                name: 'Имя',
+                value: 'name',
+            },
+            {
+                name: 'Почта',
+                value: 'email',
+            },
+            {
+                name: 'Телефон',
+                value: 'phone',
+            },
+        ]
+    }
 
     // return object with all data
     return data

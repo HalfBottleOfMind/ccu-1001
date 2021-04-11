@@ -8,11 +8,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, index) in items" :key="index" class="bg-gray even:bg-gray-dark">
-          <td v-for="(field, fieldIndex) in headers" :key="fieldIndex" class="text-center px-4 py-2">
-            {{ item[field.value] }}
-          </td>
-        </tr>
+        <slot name="row" v-for="(item, index) in items" :key="index" :item="item">
+          <tr class="bg-gray even:bg-gray-dark">
+            <td v-for="(field, fieldIndex) in headers" :key="fieldIndex" class="text-center px-4 py-2">
+              {{ item[field.value] }}
+            </td>
+          </tr>
+        </slot>
       </tbody>
     </table>
 </template>

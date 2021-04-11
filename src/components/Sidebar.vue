@@ -25,6 +25,12 @@
      Example Table
    </NavigateButton>
    <NavigateButton
+       @click="$emit('navigate', 'example editable table')"
+       :active="currentPage === 'example editable table'"
+   >
+     Example Editable Table
+   </NavigateButton>
+   <NavigateButton
        @click="$emit('navigate', 'example bars')"
        :active="currentPage === 'example bars'"
    >
