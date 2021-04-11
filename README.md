@@ -70,7 +70,7 @@
 |Таблица |`Table`    |`ExampleTable`<br>`ExampleEditableTable`[^1]   |
 |Бар     |`Bar`      |`ExampleBars`                                  |
 
-[^1] Таблицы допускают полное переопределение верстки строк таблицы. Пример в файле `ExampleEditableTable`.  
+[^1] Таблицы допускают полное переопределение верстки строк таблицы. Пример в файле `ExampleEditableTable`. [Vue Slots docs](https://v3.vuejs.org/guide/component-slots.html#slot-content).
 
 ## Смена лого, favicon, заголовка страницы
 
