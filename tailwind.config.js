@@ -1,6 +1,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
+  mode: 'jit',
   purge: [
       './src/**/*.vue',
       './public/index.html',
@@ -49,11 +50,6 @@ module.exports = {
           hot: colors.red['500'],
         }
       }
-    },
-  },
-  variants: {
-    extend: {
-      backgroundColor: ['even'],
     },
   },
   plugins: [],
